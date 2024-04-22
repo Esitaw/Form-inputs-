@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Inputs</title>
+    <style>
+        #thankYouMessage {
+            display: none;
+        }
+        #thankYouMessage:target {
+            display: block;
+        }
+        #thankYouMessage:target + myForm{
+            display: none;
+        }
+        .image-container {
+            text-align: left;
+        }
+        img {
+            max-width: 100;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tell us your thoughts!</h1>
+    <form id="myForm" action="#thankYouMessage">
+        <div class="image-container">
+            <img src="https://i.ytimg.com/vi/sVqLK1WrHHw/maxresdefault.jpg" width="580" height="220"/>
+        </div>
+        <p>Can you share your thoughts and feelings about the anime "Your lie in April"?</p>
+        <textarea name="comments" cols="50" rows="10"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="thankYouMessage">
+        <p>Thank you for sharing your comments!</p>
+    </div>
+</body>
+</html>
